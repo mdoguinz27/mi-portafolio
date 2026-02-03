@@ -54,7 +54,7 @@ const EDU_TYPES = {
     badge: 'bg-emerald-500/20 text-emerald-500'
   },
   course: {
-    display: 'Curso/Cert',
+    display: 'Curso',
     icon: Award,
     color: 'text-blue-500',
     bg: 'bg-blue-500/10',
@@ -68,138 +68,163 @@ const defaultData = {
   "photo": "https://media.licdn.com/dms/image/v2/D4D03AQG5a67KZZjfFw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731807714558?e=1771459200&v=beta&t=CNwDTMr5HbxvZV52qAO6i8W5SxZmp_KYmuBfsLNESzk",
   "currentTheme": "oscuro",
   "contactInfo": [
-    {
-      "id": "c1",
-      "type": "Email",
-      "value": "mdoguinz@gmail.com"
-    },
-    {
-      "id": "c2",
-      "type": "Linkedin",
-      "value": "https://www.linkedin.com/in/mgabynunez"
-    },
-    {
-      "id": "c3",
-      "type": "Ubicación",
-      "value": "Buenos Aires, Argentina"
-    }
+      {
+          "id": "c1",
+          "type": "Email",
+          "value": "mdoguinz@gmail.com"
+      },
+      {
+          "id": "c2",
+          "type": "Linkedin",
+          "value": "https://www.linkedin.com/in/mgabynunez"
+      },
+      {
+          "id": "c3",
+          "type": "Ubicación",
+          "value": "Buenos Aires, Argentina"
+      }
   ],
   "experience": [
-    {
-      "id": "e1",
-      "company": "Fravega Tech",
-      "position": "QA Automation SR",
-      "period": "2024 - Actualidad",
-      "desc": "- Gestión avanzada de control de versiones, incluyendo manejo de ramas, estrategias de branching y pull/merge requests mediante GitLab, GitHub y Bitbucket.\n\n- Participación activa en refinamientos funcionales, definición de criterios de aceptación y revisión de historias de usuario, aportando enfoque de calidad desde etapas tempranas del desarrollo.\n\n- Diseño y ejecución de casos de prueba manuales utilizando Xray, integrados con JIRA, asegurando trazabilidad completa entre requerimientos, pruebas y defectos.\n\n- Automatización de pruebas funcionales de Front-end para aplicaciones mobile desarrolladas en React Native, utilizando WebdriverIO para validar flujos críticos de usuario.\n\n- Diseño y desarrollo de un framework de automatización de Back-end desde cero, enfocado en APIs REST, implementado con Cypress y JavaScript, con más de 60 casos de prueba automatizados.\n\n- Ejecución continua de pruebas automatizadas de APIs mediante Argo Workflows, integradas con GitLab CI y Kubernetes, utilizando cronjobs para corridas diarias y validación constante de servicios.\n\n- Validación de servicios Back-end y contratos de APIs mediante Cypress (cy.request) y Postman, incluyendo autenticación, headers, payloads, status codes y flujos end-to-end.\n\n- Análisis y monitoreo de logs, métricas y performance de servicios y aplicaciones mobile utilizando Grafana, Flipper y Reactotron, colaborando en la detección y diagnóstico de incidentes.\n\n- Ejecución de pruebas en entornos locales, levantando la aplicación React Native para validaciones en dispositivos físicos y virtuales (emuladores y simuladores).\n\n- Trabajo colaborativo con equipos de Desarrollo, Producto y DevOps bajo metodologías ágiles (Scrum / Kanban), promoviendo buenas prácticas de calidad, automatización y mejora continua."
-    },
-    {
-      "id": "e2",
-      "company": "Contractor",
-      "position": "QA Automation SR",
-      "period": "2022 - 2024",
-      "desc": "- Diseño, creación y mantenimiento de baterías de casos de prueba utilizando Zephyr Scale, asegurando cobertura funcional y trazabilidad con los requerimientos.\n\n- Gestión de tareas, planificación y seguimiento de sprints mediante JIRA, trabajando bajo metodologías ágiles y coordinando actividades con el equipo.\n\nExperiencia sólida en sistemas de control de versiones, utilizando GitHub y GitLab en entornos colaborativos de desarrollo y testing.\n\n- Capacidad avanzada para leer, escribir y comprender código en Python, TypeScript y JavaScript, aplicado al análisis de flujos, debugging y automatización de pruebas.\n\n- Diseño e implementación de frameworks de automatización de pruebas web, utilizando Selenium, Cypress, Playwright y Pytest, orientados a la mantenibilidad y escalabilidad.\n\n- Reporte, seguimiento y validación de defectos en JIRA, asegurando una correcta priorización, comunicación y resolución de incidencias.\n\n- Diseño y ejecución de pruebas de Back-end y APIs REST, validando lógica de negocio y contratos de servicios mediante Postman y Swagger.\n\n- Análisis de requerimientos de negocio y técnicos, y elaboración de casos de prueba funcionales alineados a criterios de aceptación y objetivos del producto.\n\n- Ejecución de pruebas en entornos web responsive, validando la correcta funcionalidad de la aplicación en navegadores y vistas mobile (mobile web).\n\n- Diseño, creación y mantenimiento de baterías de casos de prueba utilizando Zephyr Scale, asegurando cobertura funcional y trazabilidad con los requerimientos. \n\n- Gestión de tareas, planificación y seguimiento de sprints mediante JIRA, trabajando bajo metodologías ágiles y coordinando actividades con el equipo. Experiencia sólida en sistemas de control de versiones, utilizando GitHub y GitLab en entornos colaborativos de desarrollo y testing. \n\n- Capacidad avanzada para leer, escribir y comprender código en Python, TypeScript y JavaScript, aplicado al análisis de flujos, debugging y automatización de pruebas. \n\n- Diseño e implementación de frameworks de automatización de pruebas web, utilizando Selenium, Cypress, Playwright y Pytest, orientados a la mantenibilidad y escalabilidad. \n\n- Reporte, seguimiento y validación de defectos en JIRA, asegurando una correcta priorización, comunicación y resolución de incidencias. \n\n- Diseño y ejecución de pruebas de Back-end y APIs REST, validando lógica de negocio y contratos de servicios mediante Postman y Swagger. \n\n- Análisis de requerimientos de negocio y técnicos, y elaboración de casos de prueba funcionales alineados a criterios de aceptación y objetivos del producto. \n\n- Ejecución de pruebas en entornos web responsive, validando la correcta funcionalidad de la aplicación en navegadores y vistas mobile (mobile web).\nAptitudes: Automatización QA · JavaScript · Bases de datos · TypeScript · Bitbucket"
-    },
-    {
-      "id": "1770138327765",
-      "company": "ank",
-      "position": "QA Automation Lead",
-      "period": "2021 - 2022",
-      "desc": "- Liderazgo de QA Automation: Dirección técnica del equipo de automatización, definiendo mejores prácticas, estándares de código y arquitecturas de pruebas para asegurar la escalabilidad del proyecto.\n\n- Diseño de Frameworks de Automatización: Desarrollo y mantenimiento de frameworks de pruebas End-to-End (E2E) para Backend y Frontend utilizando Python, Selenium y Appium, optimizando la cobertura de pruebas en plataformas Web y Mobile (Android/iOS).\n\n- Estrategia de Pruebas Multi-plataforma: Supervisión y ejecución de ciclos de pruebas manuales y automatizados en dispositivos físicos, garantizando la paridad de funciones y una UX consistente en el ecosistema móvil.\n\n- Gestión del Ciclo de Vida de Defectos (STLC): Administración avanzada en Jira y Zephyr, desde el análisis técnico de User Stories hasta el reporte y seguimiento crítico de bugs, asegurando el cumplimiento de los criterios de aceptación.\n\n- Mentoring y Capacitación Técnica: Mentoría activa al equipo de QA para la transición del testing manual al automatizado, impulsando el crecimiento profesional hacia roles de SDET.\n\n- Gobierno de Código y CI/CD: Implementación de flujos de trabajo eficientes utilizando Git para el control de versiones, asegurando integraciones limpias y revisiones de código exhaustivas.\n\n- Planificación de Pruebas Especializadas: Diseño y ejecución de estrategias de Smoke, Regression e Integration testing, minimizando riesgos en lanzamientos a producción y reduciendo el Time-to-Market.\n\n- Gestión Operativa y Planificación: Orquestación, asignación y seguimiento de tareas (KPIs de calidad), alineando los esfuerzos de testing con los objetivos del negocio y los sprints de desarrollo."
-    },
-    {
-      "id": "1770139816174",
-      "company": "Nosis",
-      "position": "Lider QA",
-      "period": "2018 - 2021",
-      "desc": "- Análisis de requerimientos funcionales y técnicos a partir de Casos de Uso y User Stories, comprendiendo el funcionamiento interno de los proyectos y validando criterios de aceptación.\n\n- Identificación de oportunidades de automatización para reemplazar procesos manuales y mejorar la eficiencia del ciclo de testing.\n\n- Diseño, desarrollo y ejecución de casos de prueba y scripts automatizados utilizando Java (JetBrains) y Python (PyCharm) con Selenium, orientados a pruebas web y mobile web.\n\n- Mantenimiento y refactorización de scripts automatizados existentes, asegurando estabilidad, reutilización y escalabilidad de los frameworks de prueba.\n\n- Diseño y ejecución de estrategias de testing, incluyendo smoke tests, pruebas funcionales, regresión y pruebas de estrés/performance utilizando JMeter.\n\n- Ejecución de pruebas de aplicaciones web y mobile, validando comportamiento funcional, experiencia de usuario y flujos críticos.\n\n- Pruebas cross-browser y responsive, verificando compatibilidad en Chrome, Firefox y Edge, así como en dispositivos móviles Android e iOS (iPhone).\n\n- Generación y preparación de datos de prueba mediante consultas SQL, asegurando escenarios realistas y consistentes para la validación funcional.\n\n- Reporte, seguimiento y análisis de defectos en JIRA, elaborando reportes de resultados de pruebas y asegurando una comunicación efectiva con el equipo.\n\n- Colaboración activa con equipos de Desarrollo, Diseño y Análisis, proponiendo mejoras sobre puntos débiles del sistema en términos de funcionalidad, performance y experiencia de usuario.\n\n- Estimación de esfuerzos, priorización de pruebas y planificación de actividades, alineadas a los objetivos del proyecto y tiempos de entrega.\n\n- Aseguramiento y control de calidad end-to-end, garantizando la estabilidad, confiabilidad y cumplimiento de estándares del producto."
-    }
+      {
+          "id": "e1",
+          "company": "Fravega Tech",
+          "position": "QA Automation SR",
+          "period": "2024 - Actual",
+          "desc": "- Gestión avanzada de control de versiones, incluyendo manejo de ramas, estrategias de branching y pull/merge requests mediante GitLab, GitHub y Bitbucket.\n\n- Participación activa en refinamientos funcionales, definición de criterios de aceptación y revisión de historias de usuario, aportando enfoque de calidad desde etapas tempranas del desarrollo.\n\n- Diseño y ejecución de casos de prueba manuales utilizando Xray, integrados con JIRA, asegurando trazabilidad completa entre requerimientos, pruebas y defectos.\n\n- Automatización de pruebas funcionales de Front-end para aplicaciones mobile desarrolladas en React Native, utilizando WebdriverIO para validar flujos críticos de usuario.\n\n- Diseño y desarrollo de un framework de automatización de Back-end desde cero, enfocado en APIs REST, implementado con Cypress y JavaScript, con más de 60 casos de prueba automatizados.\n\n- Ejecución continua de pruebas automatizadas de APIs mediante Argo Workflows, integradas con GitLab CI y Kubernetes, utilizando cronjobs para corridas diarias y validación constante de servicios.\n\n- Validación de servicios Back-end y contratos de APIs mediante Cypress (cy.request) y Postman, incluyendo autenticación, headers, payloads, status codes y flujos end-to-end.\n\n- Análisis y monitoreo de logs, métricas y performance de servicios y aplicaciones mobile utilizando Grafana, Flipper y Reactotron, colaborando en la detección y diagnóstico de incidentes.\n\n- Ejecución de pruebas en entornos locales, levantando la aplicación React Native para validaciones en dispositivos físicos y virtuales (emuladores y simuladores).\n\n- Trabajo colaborativo con equipos de Desarrollo, Producto y DevOps bajo metodologías ágiles (Scrum / Kanban), promoviendo buenas prácticas de calidad, automatización y mejora continua."
+      },
+      {
+          "id": "e2",
+          "company": "Contractor",
+          "position": "QA Automation SR",
+          "period": "2022 - 2024",
+          "desc": "- Diseño, creación y mantenimiento de baterías de casos de prueba utilizando Zephyr Scale, asegurando cobertura funcional y trazabilidad con los requerimientos.\n\n- Gestión de tareas, planificación y seguimiento de sprints mediante JIRA, trabajando bajo metodologías ágiles y coordinando actividades con el equipo.\n\nExperiencia sólida en sistemas de control de versiones, utilizando GitHub y GitLab en entornos colaborativos de desarrollo y testing.\n\n- Capacidad avanzada para leer, escribir y comprender código en Python, TypeScript y JavaScript, aplicado al análisis de flujos, debugging y automatización de pruebas.\n\n- Diseño e implementación de frameworks de automatización de pruebas web, utilizando Selenium, Cypress, Playwright y Pytest, orientados a la mantenibilidad y escalabilidad.\n\n- Reporte, seguimiento y validación de defectos en JIRA, asegurando una correcta priorización, comunicación y resolución de incidencias.\n\n- Diseño y ejecución de pruebas de Back-end y APIs REST, validando lógica de negocio y contratos de servicios mediante Postman y Swagger.\n\n- Análisis de requerimientos de negocio y técnicos, y elaboración de casos de prueba funcionales alineados a criterios de aceptación y objetivos del producto.\n\n- Ejecución de pruebas en entornos web responsive, validando la correcta funcionalidad de la aplicación en navegadores y vistas mobile (mobile web).\n\n- Diseño, creación y mantenimiento de baterías de casos de prueba utilizando Zephyr Scale, asegurando cobertura funcional y trazabilidad con los requerimientos. \n\n- Gestión de tareas, planificación y seguimiento de sprints mediante JIRA, trabajando bajo metodologías ágiles y coordinando actividades con el equipo. Experiencia sólida en sistemas de control de versiones, utilizando GitHub y GitLab en entornos colaborativos de desarrollo y testing. \n\n- Capacidad avanzada para leer, escribir y comprender código en Python, TypeScript y JavaScript, aplicado al análisis de flujos, debugging y automatización de pruebas. \n\n- Diseño e implementación de frameworks de automatización de pruebas web, utilizando Selenium, Cypress, Playwright y Pytest, orientados a la mantenibilidad y escalabilidad. \n\n- Reporte, seguimiento y validación de defectos en JIRA, asegurando una correcta priorización, comunicación y resolución de incidencias. \n\n- Diseño y ejecución de pruebas de Back-end y APIs REST, validando lógica de negocio y contratos de servicios mediante Postman y Swagger. \n\n- Análisis de requerimientos de negocio y técnicos, y elaboración de casos de prueba funcionales alineados a criterios de aceptación y objetivos del producto. \n\n- Ejecución de pruebas en entornos web responsive, validando la correcta funcionalidad de la aplicación en navegadores y vistas mobile (mobile web).\nAptitudes: Automatización QA · JavaScript · Bases de datos · TypeScript · Bitbucket"
+      },
+      {
+          "id": "1770138327765",
+          "company": "ank",
+          "position": "QA Automation Lead",
+          "period": "2021 - 2022",
+          "desc": "- Liderazgo de QA Automation: Dirección técnica del equipo de automatización, definiendo mejores prácticas, estándares de código y arquitecturas de pruebas para asegurar la escalabilidad del proyecto.\n\n- Diseño de Frameworks de Automatización: Desarrollo y mantenimiento de frameworks de pruebas End-to-End (E2E) para Backend y Frontend utilizando Python, Selenium y Appium, optimizando la cobertura de pruebas en plataformas Web y Mobile (Android/iOS).\n\n- Estrategia de Pruebas Multi-plataforma: Supervisión y ejecución de ciclos de pruebas manuales y automatizados en dispositivos físicos, garantizando la paridad de funciones y una UX consistente en el ecosistema móvil.\n\n- Gestión del Ciclo de Vida de Defectos (STLC): Administración avanzada en Jira y Zephyr, desde el análisis técnico de User Stories hasta el reporte y seguimiento crítico de bugs, asegurando el cumplimiento de los criterios de aceptación.\n\n- Mentoring y Capacitación Técnica: Mentoría activa al equipo de QA para la transición del testing manual al automatizado, impulsando el crecimiento profesional hacia roles de SDET.\n\n- Gobierno de Código y CI/CD: Implementación de flujos de trabajo eficientes utilizando Git para el control de versiones, asegurando integraciones limpias y revisiones de código exhaustivas.\n\n- Planificación de Pruebas Especializadas: Diseño y ejecución de estrategias de Smoke, Regression e Integration testing, minimizando riesgos en lanzamientos a producción y reduciendo el Time-to-Market.\n\n- Gestión Operativa y Planificación: Orquestación, asignación y seguimiento de tareas (KPIs de calidad), alineando los esfuerzos de testing con los objetivos del negocio y los sprints de desarrollo."
+      },
+      {
+          "id": "1770139816174",
+          "company": "Nosis",
+          "position": "Lider QA",
+          "period": "2018 - 2021",
+          "desc": "- Análisis de requerimientos funcionales y técnicos a partir de Casos de Uso y User Stories, comprendiendo el funcionamiento interno de los proyectos y validando criterios de aceptación.\n\n- Identificación de oportunidades de automatización para reemplazar procesos manuales y mejorar la eficiencia del ciclo de testing.\n\n- Diseño, desarrollo y ejecución de casos de prueba y scripts automatizados utilizando Java (JetBrains) y Python (PyCharm) con Selenium, orientados a pruebas web y mobile web.\n\n- Mantenimiento y refactorización de scripts automatizados existentes, asegurando estabilidad, reutilización y escalabilidad de los frameworks de prueba.\n\n- Diseño y ejecución de estrategias de testing, incluyendo smoke tests, pruebas funcionales, regresión y pruebas de estrés/performance utilizando JMeter.\n\n- Ejecución de pruebas de aplicaciones web y mobile, validando comportamiento funcional, experiencia de usuario y flujos críticos.\n\n- Pruebas cross-browser y responsive, verificando compatibilidad en Chrome, Firefox y Edge, así como en dispositivos móviles Android e iOS (iPhone).\n\n- Generación y preparación de datos de prueba mediante consultas SQL, asegurando escenarios realistas y consistentes para la validación funcional.\n\n- Reporte, seguimiento y análisis de defectos en JIRA, elaborando reportes de resultados de pruebas y asegurando una comunicación efectiva con el equipo.\n\n- Colaboración activa con equipos de Desarrollo, Diseño y Análisis, proponiendo mejoras sobre puntos débiles del sistema en términos de funcionalidad, performance y experiencia de usuario.\n\n- Estimación de esfuerzos, priorización de pruebas y planificación de actividades, alineadas a los objetivos del proyecto y tiempos de entrega.\n\n- Aseguramiento y control de calidad end-to-end, garantizando la estabilidad, confiabilidad y cumplimiento de estándares del producto."
+      }
   ],
   "projects": [
-    {
-      "id": "1770138846495",
-      "title": "bumeran - portal de empleos",
-      "type": "WEB",
-      "image": "https://www.jobboardfinder.com/upload/425870ac1e198237f2ab7232515fc7599dc34aa2/printscreen_jobboard_fond"
-    },
-    {
-      "id": "1770138808089",
-      "title": "tiendanimal - tienda de mascotas",
-      "type": "WEB",
-      "image": "https://marketing4ecommerce.net/wp-content/uploads/2019/10/tiendanimal.jpg"
-    },
-    {
-      "id": "1770138705251",
-      "title": "Fravega pay - billetera virtual",
-      "type": "MOBILE",
-      "image": "https://play-lh.googleusercontent.com/52COUlt8lPWeu6y8JAJBzACEP7uKAoc4DtZVErvmUhyeHY74n46UUi24n9n3h-1dTz4=w2560-h1440-rw"
-    },
-    {
-      "id": "p2",
-      "title": "ank - billetera virtual",
-      "type": "MOBILE",
-      "image": "https://www.roadshow.com.ar/wp-content/uploads/ank.jpg"
-    },
-    {
-      "id": "1770138752681",
-      "title": "Cocha - agencia de viajes",
-      "type": "WEB",
-      "image": "https://www.turismointegral.net/wp-content/uploads/2023/04/Plataforma-etraveler.jpg"
-    },
-    {
-      "id": "p1",
-      "title": "Nosis - información crediticia",
-      "type": "WEB",
-      "image": "https://www.nosis.com/es/content/images/landings/compliance/slide012.jpg"
-    }
+      {
+          "id": "1770138705251",
+          "title": "Fravega pay - billetera virtual",
+          "type": "MOBILE",
+          "image": "https://play-lh.googleusercontent.com/52COUlt8lPWeu6y8JAJBzACEP7uKAoc4DtZVErvmUhyeHY74n46UUi24n9n3h-1dTz4=w2560-h1440-rw"
+      },
+      {
+          "id": "p2",
+          "title": "ank - billetera virtual",
+          "type": "MOBILE",
+          "image": "https://www.roadshow.com.ar/wp-content/uploads/ank.jpg"
+      },
+      {
+          "id": "1770138808089",
+          "title": "tiendanimal - tienda de mascotas",
+          "type": "WEB",
+          "image": "https://marketing4ecommerce.net/wp-content/uploads/2019/10/tiendanimal.jpg"
+      },
+      {
+          "id": "1770138846495",
+          "title": "bumeran - portal de empleos",
+          "type": "WEB",
+          "image": "https://www.jobboardfinder.com/upload/425870ac1e198237f2ab7232515fc7599dc34aa2/printscreen_jobboard_fond"
+      },
+      {
+          "id": "1770138752681",
+          "title": "Cocha - agencia de viajes",
+          "type": "WEB",
+          "image": "https://www.turismointegral.net/wp-content/uploads/2023/04/Plataforma-etraveler.jpg"
+      },
+      {
+          "id": "p1",
+          "title": "Nosis - información crediticia",
+          "type": "WEB",
+          "image": "https://www.nosis.com/es/content/images/landings/compliance/slide012.jpg"
+      }
   ],
   "education": [
-    {
-      "id": "1770136614443",
-      "category": "career",
-      "degree": "Ingeniería en Sistemas",
-      "school": "CULTCA",
-      "year": "2015"
-    }
+      {
+          "id": "1770141439555",
+          "category": "career",
+          "degree": "Ingeniería en Sistemas",
+          "school": "CULTCA",
+          "year": "2015"
+      },
+      {
+          "id": "1770136614443",
+          "category": "course",
+          "degree": " Javascript ",
+          "school": "SoloLearn",
+          "year": "2021"
+      },
+      {
+          "id": "1770141394273",
+          "category": "course",
+          "degree": "WebdriverIO + node.js",
+          "school": "Academia QA",
+          "year": "2020"
+      },
+      {
+          "id": "1770141521124",
+          "category": "course",
+          "degree": "Git",
+          "school": "Devcode.la",
+          "year": "2020"
+      }
   ],
   "skills": [
-    {
-      "id": "1770139100474",
-      "name": "Postman",
-      "level": 48
-    },
-    {
-      "id": "1770139079835",
-      "name": "API REST",
-      "level": 85
-    },
-    {
-      "id": "1770139067025",
-      "name": "Appium",
-      "level": 90
-    },
-    {
-      "id": "1770139049835",
-      "name": "Javascript",
-      "level": 70
-    },
-    {
-      "id": "s1",
-      "name": "Cypress",
-      "level": 80
-    },
-    {
-      "id": "s2",
-      "name": "Playwright",
-      "level": 50
-    },
-    {
-      "id": "s3",
-      "name": "Python",
-      "level": 65
-    }
+      {
+          "id": "1770141586732",
+          "name": "Git",
+          "level": 70
+      },
+      {
+          "id": "1770139100474",
+          "name": "Postman",
+          "level": 48
+      },
+      {
+          "id": "1770139079835",
+          "name": "API REST",
+          "level": 85
+      },
+      {
+          "id": "1770139067025",
+          "name": "Appium",
+          "level": 90
+      },
+      {
+          "id": "1770139049835",
+          "name": "Javascript",
+          "level": 70
+      },
+      {
+          "id": "s1",
+          "name": "Cypress",
+          "level": 80
+      },
+      {
+          "id": "s2",
+          "name": "Playwright",
+          "level": 50
+      },
+      {
+          "id": "s3",
+          "name": "Python",
+          "level": 65
+      }
   ]
 }
-
 // Componente de controles limpio para no obstruir
 const EditToolbar = ({ onUp, onDown, onDelete }) => (
   <div className="flex items-center gap-1 bg-slate-800 p-1 rounded-md border border-slate-700 shadow-xl mb-2 w-fit ml-auto">
@@ -390,7 +415,7 @@ export default function App() {
             <div className="space-y-12">
               {data.experience.map((exp, idx) => (
                 <div key={exp.id} className="relative pl-8 border-l-2 border-blue-500/20">
-                  <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
 
                   {isEditMode && <EditToolbar onUp={idx > 0 ? () => moveItem('experience', idx, -1) : null} onDown={idx < data.experience.length - 1 ? () => moveItem('experience', idx, 1) : null} onDelete={() => deleteItem('experience', exp.id)} />}
 
@@ -405,7 +430,7 @@ export default function App() {
                     <>
                       <div className="flex justify-between items-start mb-1">
                         <h4 className={`text-xl font-black ${currentTheme.textBold}`}>{exp.position}</h4>
-                        <span className="text-[10px] font-black opacity-30">{exp.period}</span>
+                        <span className="text-[12px] text-blue-500 font-black opacity-80">{exp.period}</span>
                       </div>
                       <p className="text-blue-500 font-black text-xs mb-4 uppercase">{exp.company}</p>
                       <div className="text-sm leading-relaxed opacity-80">{renderFormattedText(exp.desc)}</div>
@@ -433,7 +458,7 @@ export default function App() {
                         <EditToolbar onUp={idx > 0 ? () => moveItem('education', idx, -1) : null} onDown={idx < data.education.length - 1 ? () => moveItem('education', idx, 1) : null} onDelete={() => deleteItem('education', edu.id)} />
                         <select className="w-full bg-slate-800 text-[10px] p-1 rounded" value={edu.category} onChange={e => updateListItem('education', edu.id, 'category', e.target.value)}>
                           <option value="career">Carrera</option>
-                          <option value="course">Certificación</option>
+                          <option value="course">Curso</option>
                         </select>
                         <input className={`w-full font-black text-xs p-1 rounded ${currentTheme.input}`} value={edu.degree} onChange={e => updateListItem('education', edu.id, 'degree', e.target.value)} />
                         <input className={`w-full text-[10px] text-emerald-500 p-1 rounded ${currentTheme.input}`} value={edu.school} onChange={e => updateListItem('education', edu.id, 'school', e.target.value)} />
@@ -446,10 +471,10 @@ export default function App() {
                             {React.createElement(config.icon, { size: 16 })}
                           </div>
                           <div className="flex flex-col items-end gap-1">
-                            <span className="text-[10px] font-black opacity-30">{edu.year}</span>
                             <span className={`text-[8px] font-black px-2 py-0.5 rounded-full uppercase tracking-tighter ${config.badge}`}>
                               {config.display}
                             </span>
+                            <span className="text-[10px] font-black opacity-80 py-0.5 px-2 ">{edu.year}</span>
                           </div>
                         </div>
                         <h4 className={`font-black text-sm mb-1 ${currentTheme.textBold}`}>{edu.degree}</h4>
@@ -511,6 +536,8 @@ export default function App() {
       <footer className="mt-20 py-6 border-t border-slate-800 text-center opacity-80 text-[9px] font-black uppercase tracking-[0.3em]">
         BUILD V.2.6 PROD
       </footer>
+
+    
 
       <style dangerouslySetInnerHTML={{
         __html: `
