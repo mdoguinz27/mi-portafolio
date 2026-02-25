@@ -41,7 +41,7 @@ const themes = {
 
 const CONTACT_TYPES = [
   { label: 'Email', icon: Mail, color: 'text-blue-500' },
-  { label: 'Linkedin', icon: Linkedin, color: 'text-blue-400' },
+  { label: 'n', icon: Linkedin, color: 'text-blue-400' },
   { label: 'Github', icon: Github, color: 'text-slate-500' },
   { label: 'Ubicación', icon: MapPin, color: 'text-red-500' },
   { label: 'Web', icon: Globe, color: 'text-emerald-500' },
@@ -68,7 +68,7 @@ const EDU_TYPES = {
 const defaultData = {
   "name": "Maria Gabriela Doguinz",
   "role": "QA Automation Engineer",
-  "photo": "https://media.licdn.com/dms/image/v2/D4D03AQG5a67KZZjfFw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731807714558?e=1771459200&v=beta&t=CNwDTMr5HbxvZV52qAO6i8W5SxZmp_KYmuBfsLNESzk",
+  "photo": "/profile.jpg",
   "currentTheme": "oscuro",
   "contactInfo": [
     {
@@ -287,7 +287,12 @@ export default function App() {
   const [data, setData] = useState(() => {
     try {
       const saved = localStorage.getItem('qa_pro_v7_5');
-      return saved ? JSON.parse(saved) : defaultData;
+      const parsed = saved ? JSON.parse(saved) : defaultData;
+      // Migración: si la foto es de LinkedIn, resetear a la local
+      if (parsed.photo && parsed.photo.includes('media.licdn.com')) {
+        parsed.photo = defaultData.photo;
+      }
+      return parsed;
     } catch (e) { return defaultData; }
   });
   const [isEditMode, setIsEditMode] = useState(false);
@@ -388,7 +393,13 @@ export default function App() {
                 className="relative group"
               >
                 <div className={`absolute inset-0 rounded-full bg-indigo-500 blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500`} />
-                <img src={data.photo} className="relative w-40 h-40 rounded-full object-cover ring-4 ring-indigo-500/20 mb-6 shadow-2xl" />
+                <img
+                  src={data.photo}
+                  className="relative w-40 h-40 rounded-full object-cover ring-4 ring-indigo-500/20 mb-6 shadow-2xl"
+                  onError={(e) => {
+                    e.target.src = "https://ui-avatars.com/api/?name=Maria+Gabriela+Doguinz&background=6366f1&color=fff&size=512";
+                  }}
+                />
               </motion.div>
 
               {isEditMode && (
