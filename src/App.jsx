@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import {
   Bug, Trash2, Plus, Mail, MapPin, GraduationCap,
-  Terminal, Activity, Linkedin, Github, Lock, Unlock,
+  Terminal, Linkedin, Github, Lock, Unlock,
   Sun, Moon, Award,
   Monitor, Phone, Link as LinkIcon,
   ArrowUp, ArrowDown,
   Code, Image as ImageIcon,
-  ChevronDown, Globe, MessageSquare, ExternalLink
+  ChevronDown, Globe, MessageSquare, ExternalLink, Printer, Check, Copy
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 
 const MASTER_PIN = "1234";
 
@@ -41,7 +41,7 @@ const themes = {
 
 const CONTACT_TYPES = [
   { label: 'Email', icon: Mail, color: 'text-blue-500' },
-  { label: 'n', icon: Linkedin, color: 'text-blue-400' },
+  { label: 'Linkedin', icon: Linkedin, color: 'text-blue-400' },
   { label: 'Github', icon: Github, color: 'text-slate-500' },
   { label: 'Ubicación', icon: MapPin, color: 'text-red-500' },
   { label: 'Web', icon: Globe, color: 'text-emerald-500' },
@@ -79,12 +79,17 @@ const defaultData = {
     {
       "id": "c2",
       "type": "Linkedin",
-      "value": "https://www.linkedin.com/in/mgabynunez"
+      "value": "mgabynunez"
     },
     {
       "id": "c3",
       "type": "Ubicación",
       "value": "Buenos Aires, Argentina"
+    },
+    {
+      "id": "c4",
+      "type": "Github",
+      "value": "mdoguinz27"
     }
   ],
   "experience": [
@@ -93,7 +98,7 @@ const defaultData = {
       "company": "Fravega Tech",
       "position": "QA Automation SR",
       "period": "2024 - Actual",
-      "desc": "- Gestión de versionado (GitLab, GitHub, Bitbucket) y estrategias de branching.\n- Participación en refinamientos y revisión de historias de usuario para asegurar calidad temprana.\n- Diseño y ejecución de pruebas manuales (Xray, JIRA) y automatización mobile (React Native, WebdriverIO).\n- Desarrollo de framework de automatización Back-end para APIs REST (Cypress, JS).\n- Ejecución continua de pruebas via CI/CD (Argo, GitLab CI, Kubernetes) y validación de contratos API.\n- Monitoreo de logs y métricas (Grafana, Flipper, Reactotron) y soporte en incidentes.\n- Trabajo ágil en equipo multidisciplinario (Scrum/Kanban)."
+      "desc": "- Gestión de versionado (GitLab, GitHub) y estrategias de branching.\n- Definición de estrategia de pruebas y colaboración temprana con producto e ingeniería en refinamientos para asegurar calidad desde etapas iniciales.\n- Diseño y ejecución de pruebas manuales (Xray, JIRA) y automatización web y mobile (React Native, WebdriverIO).\n- Diseño y desarrollo de framework de QA Automation backend para APIs REST con Cypress y JavaScript, incluyendo automatización de endpoints y validación de respuestas.\n- Ejecución continua de suites automatizadas en CI/CD (Argo, GitLab CI, Kubernetes) y validación de contratos API.\n- Seguimiento de ejecuciones de pruebas automatizadas en Argo CD y envío de reportes diarios con resultados por Google Chat.\n- Monitoreo de logs y métricas (Grafana, Flipper, Reactotron) y soporte en incidentes.\n- Trabajo ágil en equipo multidisciplinario (Scrum/Kanban)."
     },
     {
       "id": "e2",
@@ -120,7 +125,7 @@ const defaultData = {
   "projects": [
     {
       "id": "1770138705251",
-      "title": "Fravega pay - billetera virtual",
+      "title": "Frávega pay - billetera virtual",
       "type": "MOBILE",
       "image": "https://play-lh.googleusercontent.com/52COUlt8lPWeu6y8JAJBzACEP7uKAoc4DtZVErvmUhyeHY74n46UUi24n9n3h-1dTz4=w2560-h1440-rw"
     },
@@ -131,22 +136,28 @@ const defaultData = {
       "image": "https://www.roadshow.com.ar/wp-content/uploads/ank.jpg"
     },
     {
+      "id": "fravega-ecommerce",
+      "title": "Frávega - ecommerce",
+      "type": "WEB",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEXZlBz11BdgwTK5aw3Bdqtpvm9SnxbdwTcM7CLDLfk6s6V9Ro4AwaUXb-&s=10"
+    },
+    {
       "id": "1770138808089",
       "title": "tiendanimal - tienda de mascotas",
       "type": "WEB",
       "image": "https://marketing4ecommerce.net/wp-content/uploads/2019/10/tiendanimal.jpg"
     },
     {
-      "id": "1770138846495",
-      "title": "bumeran - portal de empleos",
-      "type": "WEB",
-      "image": "https://www.jobboardfinder.com/upload/425870ac1e198237f2ab7232515fc7599dc34aa2/printscreen_jobboard_fond"
-    },
-    {
       "id": "1770138752681",
       "title": "Cocha - agencia de viajes",
       "type": "WEB",
       "image": "https://www.turismointegral.net/wp-content/uploads/2023/04/Plataforma-etraveler.jpg"
+    },
+    {
+      "id": "1770138846495",
+      "title": "bumeran - portal de empleos",
+      "type": "WEB",
+      "image": "https://image.slidesharecdn.com/paginaslaborales-231025233006-70233354/75/paginas-laborales-pptx-2-2048.jpg"
     },
     {
       "id": "p1",
@@ -188,43 +199,38 @@ const defaultData = {
   "skills": [
     {
       "id": "1770141586732",
-      "name": "Git",
-      "level": 70
+      "name": "GitHub/GitLab",
+      "level": 60
     },
     {
       "id": "1770139100474",
-      "name": "Postman",
-      "level": 48
+      "name": "ApiRest + Postman",
+      "level": 60
     },
     {
       "id": "1770139079835",
-      "name": "API REST",
-      "level": 85
-    },
-    {
-      "id": "1770139067025",
-      "name": "Appium",
-      "level": 90
+      "name": "NodeJS + Express",
+      "level": 55
     },
     {
       "id": "1770139049835",
-      "name": "Javascript",
-      "level": 70
-    },
-    {
-      "id": "s1",
-      "name": "Cypress",
-      "level": 80
-    },
-    {
-      "id": "s2",
-      "name": "Playwright",
+      "name": "Typescript + Playwright",
       "level": 50
     },
     {
+      "id": "s1",
+      "name": "Javascript + Cypress",
+      "level": 60
+    },
+    {
       "id": "s3",
-      "name": "Python",
-      "level": 65
+      "name": "Python + Appium",
+      "level": 45
+    },
+    {
+      "id": "s4",
+      "name": "DB [SQL/NoSQL]",
+      "level": 40
     }
   ]
 }
@@ -247,6 +253,23 @@ const itemVariants = {
     y: 0,
     transition: { type: "spring", stiffness: 50 }
   }
+};
+
+const getContactHref = (info) => {
+  if (info.type === 'Email') return `mailto:${info.value}`;
+  if (info.type === 'Linkedin') {
+    return info.value.startsWith('http') ? info.value : `https://www.linkedin.com/in/${info.value.replace(/^@/, '')}`;
+  }
+  if (info.type === 'Github') {
+    return info.value.startsWith('http') ? info.value : `https://github.com/${info.value.replace(/^@/, '')}`;
+  }
+  return info.value;
+};
+
+const getContactLabel = (info) => {
+  if (info.type === 'Linkedin') return 'LinkedIn';
+  if (info.type === 'Github') return 'GitHub';
+  return info.value;
 };
 
 // Componente de texto formateado con viñetas
@@ -272,7 +295,7 @@ const FormattedText = ({ text }) => {
 
 // Componente de controles
 const EditToolbar = ({ onUp, onDown, onDelete }) => (
-  <motion.div
+  <Motion.div
     initial={{ opacity: 0, scale: 0.9 }}
     animate={{ opacity: 1, scale: 1 }}
     className="flex items-center gap-1 bg-slate-800 p-1 rounded-lg border border-slate-700 shadow-lg mb-2 w-fit ml-auto z-10 relative"
@@ -280,7 +303,7 @@ const EditToolbar = ({ onUp, onDown, onDelete }) => (
     {onUp && <button onClick={onUp} className="p-1.5 hover:bg-slate-700 text-slate-300 rounded-md transition-colors"><ArrowUp size={14} /></button>}
     {onDown && <button onClick={onDown} className="p-1.5 hover:bg-slate-700 text-slate-300 rounded-md transition-colors"><ArrowDown size={14} /></button>}
     <button onClick={onDelete} className="p-1.5 hover:bg-red-900/40 text-red-400 rounded-md transition-colors"><Trash2 size={14} /></button>
-  </motion.div>
+  </Motion.div>
 );
 
 export default function App() {
@@ -288,19 +311,75 @@ export default function App() {
     try {
       const saved = localStorage.getItem('qa_pro_v7_5');
       const parsed = saved ? JSON.parse(saved) : defaultData;
+      if (!parsed.contactInfo?.some(info => info.type === 'Github')) {
+        parsed.contactInfo = [...(parsed.contactInfo || []), defaultData.contactInfo.find(info => info.type === 'Github')];
+      }
+      const taskMigrations = [
+        [
+          '- Participación en refinamientos y revisión de historias de usuario para asegurar calidad temprana.',
+          '- Definición de estrategia de pruebas y colaboración temprana con producto e ingeniería en refinamientos para asegurar calidad desde etapas iniciales.'
+        ],
+        [
+          '- Diseño y ejecución de pruebas manuales (Xray, JIRA) y automatización mobile (React Native, WebdriverIO).',
+          '- Diseño y ejecución de pruebas manuales (Xray, JIRA) y automatización web y mobile (React Native, WebdriverIO).'
+        ],
+        [
+          '- Desarrollo de framework de automatización Back-end para APIs REST (Cypress, JS).',
+          '- Diseño y desarrollo de framework de QA Automation backend para APIs REST con Cypress y JavaScript, incluyendo automatización de endpoints y validación de respuestas.'
+        ]
+      ];
+      const bumeranImage = defaultData.projects.find(project => project.id === '1770138846495').image;
+      parsed.experience = parsed.experience?.map(exp => {
+        if (exp.company !== 'Fravega Tech') return exp;
+        let desc = taskMigrations.reduce((current, [previous, updated]) => current.replace(previous, updated), exp.desc || '');
+        if (!desc.includes('Google Chat')) {
+          desc = `${desc}${desc ? '\n' : ''}- Seguimiento de ejecuciones de pruebas automatizadas en Argo CD y envío de reportes diarios con resultados por Google Chat.`;
+        }
+        return { ...exp, desc };
+      }) || defaultData.experience;
+      parsed.projects = parsed.projects?.map(project => (
+        project.id === '1770138846495' ? { ...project, image: bumeranImage } : project
+      )) || defaultData.projects;
+      if (!parsed.projects.some(project => project.id === 'fravega-ecommerce')) {
+        parsed.projects.push(defaultData.projects.find(project => project.id === 'fravega-ecommerce'));
+      }
+      const skillIds = new Set();
+      parsed.skills = (parsed.skills || defaultData.skills).map((skill, index) => {
+        let id = skill.id || `skill-${index}`;
+        while (skillIds.has(id)) id = `${id}-${index}`;
+        skillIds.add(id);
+        return { ...skill, id };
+      });
       // Migración: si la foto es de LinkedIn, resetear a la local
       if (parsed.photo && parsed.photo.includes('media.licdn.com')) {
         parsed.photo = defaultData.photo;
       }
       return parsed;
-    } catch (e) { return defaultData; }
+    } catch { return defaultData; }
   });
-  const [isEditMode, setIsEditMode] = useState(false);
+  const [isEditMode] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
   const currentTheme = themes[data.currentTheme] || themes.oscuro;
 
   useEffect(() => {
     localStorage.setItem('qa_pro_v7_5', JSON.stringify(data));
   }, [data]);
+
+  useEffect(() => {
+    if (!emailCopied) return undefined;
+    const timeoutId = window.setTimeout(() => setEmailCopied(false), 2000);
+    return () => window.clearTimeout(timeoutId);
+  }, [emailCopied]);
+
+  const handleEmailClick = async (event, email) => {
+    event.preventDefault();
+    try {
+      await navigator.clipboard.writeText(email);
+      setEmailCopied(true);
+    } catch {
+      window.open(`mailto:${email}`, '_self');
+    }
+  };
 
   const updateField = (field, value) => setData(prev => ({ ...prev, [field]: value }));
 
@@ -331,20 +410,28 @@ export default function App() {
     <div className={`min-h-screen ${currentTheme.bg} ${currentTheme.text} transition-colors duration-500 font-sans selection:bg-indigo-500/30`}>
 
       {/* NAVBAR */}
-      <motion.nav
+      <Motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
-        className={`fixed top-0 w-full z-[100] ${currentTheme.glass} px-6 py-4 flex justify-between items-center print:hidden`}
+        className={`print-hidden fixed top-0 w-full z-[100] ${currentTheme.glass} px-6 py-4 flex justify-between items-center print:hidden`}
       >
         <div className="flex items-center gap-2">
           <div className="bg-indigo-500/10 p-2 rounded-xl">
             <Bug size={20} className="text-indigo-500" />
           </div>
-          <span className={`font-black text-lg ${currentTheme.textBold} tracking-tight`}>QA CONSOLE</span>
+          <span className={`font-black text-lg ${currentTheme.textBold} tracking-tight`}>QA</span>
         </div>
 
         <div className="flex items-center gap-4">
+          <button
+            onClick={() => window.print()}
+            title="Imprimir o guardar como PDF"
+            className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-bold transition-colors ${currentTheme.hover} ${currentTheme.textBold}`}
+          >
+            <Printer size={16} />
+            <span className="hidden sm:inline">Guardar PDF</span>
+          </button>
           {/* MODO EDICION */}
           {/* <button
             onClick={() => {
@@ -364,31 +451,31 @@ export default function App() {
           >
             <AnimatePresence mode="wait">
               {data.currentTheme === 'oscuro' ? (
-                <motion.div key="sun" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }}>
+                <Motion.div key="sun" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }}>
                   <Sun size={20} />
-                </motion.div>
+                </Motion.div>
               ) : (
-                <motion.div key="moon" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }}>
+                <Motion.div key="moon" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }}>
                   <Moon size={20} />
-                </motion.div>
+                </Motion.div>
               )}
             </AnimatePresence>
           </button>
         </div>
-      </motion.nav>
+      </Motion.nav>
 
-      <motion.main
+      <Motion.main
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-6xl mx-auto pt-28 px-6 pb-20 grid md:grid-cols-12 gap-8"
+        className="cv-print-layout max-w-6xl mx-auto pt-28 px-6 pb-20 grid md:grid-cols-12 gap-8"
       >
 
         {/* COLUMNA IZQUIERDA */}
-        <aside className="md:col-span-4 space-y-6">
-          <motion.section variants={itemVariants} className={`${currentTheme.card} p-8 rounded-[2rem] border ${currentTheme.border}`}>
+        <aside className="cv-print-sidebar md:col-span-4 space-y-6">
+          <Motion.section variants={itemVariants} className={`cv-print-profile ${currentTheme.card} p-8 rounded-[2rem] border ${currentTheme.border}`}>
             <div className="flex flex-col items-center mb-6">
-              <motion.div
+              <Motion.div
                 whileHover={{ scale: 1.05 }}
                 className="relative group"
               >
@@ -400,7 +487,7 @@ export default function App() {
                     e.target.src = "https://ui-avatars.com/api/?name=Maria+Gabriela+Doguinz&background=6366f1&color=fff&size=512";
                   }}
                 />
-              </motion.div>
+              </Motion.div>
 
               {isEditMode && (
                 <input
@@ -432,7 +519,7 @@ export default function App() {
                 {isEditMode && <button onClick={() => addItem('contactInfo', { id: Date.now().toString(), type: 'Email', value: '' })} className="text-indigo-500"><Plus size={16} /></button>}
               </div>
               {data.contactInfo.map((info, idx) => (
-                <motion.div
+                <Motion.div
                   key={info.id}
                   whileHover={{ x: 5 }}
                   className={`group relative ${currentTheme.hover} p-3 rounded-xl transition-colors duration-200`}
@@ -457,7 +544,8 @@ export default function App() {
                       </div>
                     ) : (
                       <a
-                        href={info.type === 'Email' ? `mailto:${info.value}` : info.value}
+                        href={getContactHref(info)}
+                        onClick={info.type === 'Email' ? event => handleEmailClick(event, info.value) : undefined}
                         target="_blank"
                         rel="noreferrer"
                         className="flex items-center gap-4"
@@ -465,18 +553,22 @@ export default function App() {
                         <div className={`p-2 rounded-lg ${currentTheme.bg} shadow-sm group-hover:scale-110 transition-transform`}>
                           {React.createElement(CONTACT_TYPES.find(c => c.label === info.type)?.icon || Globe, { size: 16, className: currentTheme.accent })}
                         </div>
-                        <span className="text-xs font-medium truncate opacity-80 group-hover:opacity-100">{info.value}</span>
-                        <ExternalLink size={12} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <span className="text-xs font-medium truncate opacity-80 group-hover:opacity-100">{getContactLabel(info)}</span>
+                        {info.type === 'Email' ? (
+                          <Copy size={13} className="ml-auto text-indigo-400" aria-hidden="true" />
+                        ) : (
+                          <ExternalLink size={12} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
+                        )}
                       </a>
                     )
                   )}
-                </motion.div>
+                </Motion.div>
               ))}
             </div>
-          </motion.section>
+          </Motion.section>
 
           {/* SKILLS */}
-          <motion.section variants={itemVariants} className={`${currentTheme.card} p-8 rounded-[2rem] border ${currentTheme.border}`}>
+          <Motion.section variants={itemVariants} className={`cv-print-skills ${currentTheme.card} p-8 rounded-[2rem] border ${currentTheme.border}`}>
             <div className="flex justify-between items-center mb-8">
               <h3 className={`text-xs font-black uppercase tracking-widest ${currentTheme.textBold}`}>Tech Stack</h3>
               {isEditMode && <button onClick={() => addItem('skills', { id: Date.now().toString(), name: 'Nueva Skill', level: 80 })} className="text-indigo-500"><Plus size={16} /></button>}
@@ -499,25 +591,25 @@ export default function App() {
                     )}
                   </div>
                   <div className={`h-2 ${data.currentTheme === 'oscuro' ? 'bg-slate-800' : 'bg-slate-200'} rounded-full overflow-hidden`}>
-                    <motion.div
+                    <Motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       transition={{ duration: 1, ease: "easeOut" }}
                       viewport={{ once: true }}
                       className="h-full bg-gradient-to-r from-indigo-600 to-blue-500 rounded-full shadow-[0_0_10px_rgba(79,70,229,0.3)]"
-                    ></motion.div>
+                    ></Motion.div>
                   </div>
                 </div>
               ))}
             </div>
-          </motion.section>
+          </Motion.section>
         </aside>
 
         {/* COLUMNA DERECHA */}
-        <div className="md:col-span-8 space-y-8">
+        <div className="cv-print-content md:col-span-8 space-y-8">
 
           {/* EXPERIENCIA */}
-          <motion.section variants={itemVariants} className={`${currentTheme.card} p-8 md:p-10 rounded-[2.5rem] border ${currentTheme.border} overflow-hidden`}>
+          <Motion.section variants={itemVariants} className={`cv-print-experience ${currentTheme.card} p-8 md:p-10 rounded-[2.5rem] border ${currentTheme.border} overflow-hidden`}>
             <div className="flex justify-between items-center mb-12">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-indigo-500/10 rounded-xl">
@@ -530,13 +622,13 @@ export default function App() {
 
             <div className="space-y-16">
               {data.experience.map((exp, idx) => (
-                <motion.div
+                <Motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
                   key={exp.id}
-                  className="relative pl-8 md:pl-10 border-l-2 border-indigo-500/10"
+                  className="cv-print-job relative pl-8 md:pl-10 border-l-2 border-indigo-500/10"
                 >
                   <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.5)] ring-4 ring-slate-900"></div>
 
@@ -565,13 +657,13 @@ export default function App() {
                       </div>
                     </>
                   )}
-                </motion.div>
+                </Motion.div>
               ))}
             </div>
-          </motion.section>
+          </Motion.section>
 
           {/* EDUCACIÓN */}
-          <motion.section variants={itemVariants} className={`${currentTheme.card} p-8 rounded-[2.5rem] border ${currentTheme.border}`}>
+          <Motion.section variants={itemVariants} className={`cv-print-education ${currentTheme.card} p-8 rounded-[2.5rem] border ${currentTheme.border}`}>
             <div className="flex justify-between items-center mb-8">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-emerald-500/10 rounded-xl">
@@ -585,10 +677,10 @@ export default function App() {
               {data.education.map((edu, idx) => {
                 const config = EDU_TYPES[edu.category] || EDU_TYPES.career;
                 return (
-                  <motion.div
+                  <Motion.div
                     whileHover={{ y: -5 }}
                     key={edu.id}
-                    className={`relative p-6 rounded-3xl ${currentTheme.bg} border-2 border-transparent hover:border-indigo-500/10 transition-colors shadow-sm`}
+                    className={`cv-print-education-entry relative p-6 rounded-3xl ${currentTheme.bg} border-2 border-transparent hover:border-indigo-500/10 transition-colors shadow-sm`}
                   >
                     {isEditMode ? (
                       <div className="space-y-2">
@@ -613,14 +705,14 @@ export default function App() {
                         <p className={`text-[10px] font-bold uppercase ${edu.category === 'career' ? 'text-emerald-500' : 'text-blue-500'}`}>{edu.school}</p>
                       </>
                     )}
-                  </motion.div>
+                  </Motion.div>
                 );
               })}
             </div>
-          </motion.section>
+          </Motion.section>
 
           {/* PROYECTOS */}
-          <motion.section variants={itemVariants}>
+          <Motion.section variants={itemVariants} className="cv-print-projects">
             <div className="flex justify-between items-center mb-8">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-purple-500/10 rounded-xl">
@@ -633,7 +725,7 @@ export default function App() {
 
             <div className="grid sm:grid-cols-2 gap-8">
               {data.projects.map((proj, idx) => (
-                <motion.div
+                <Motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   whileHover={{ y: -8 }}
@@ -665,7 +757,7 @@ export default function App() {
                         </div>
                         {/* Screen */}
                         <div className="relative h-full w-full bg-black rounded-[2.5rem] overflow-hidden border-[6px] border-slate-900">
-                          <img src={proj.image} className="w-full h-full object-cover" />
+                          <img src={proj.image} alt={proj.title} className="w-full h-full object-cover" />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-6 flex flex-col justify-end">
                             <span className="text-[10px] font-black text-white/60 uppercase tracking-widest mb-1">Mobile App</span>
                             <h4 className="text-white font-black text-lg leading-tight">{proj.title}</h4>
@@ -684,7 +776,7 @@ export default function App() {
                         </div>
                         {/* Screen */}
                         <div className="aspect-video relative overflow-hidden group">
-                          <img src={proj.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                          <img src={proj.image} alt={proj.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
                             <span className="text-[10px] font-black text-white/60 uppercase tracking-widest mb-1">Web Development</span>
                             <h4 className="text-white font-black text-xl leading-tight">{proj.title}</h4>
@@ -700,17 +792,33 @@ export default function App() {
                       <input className={`w-full text-[10px] p-2 rounded ${currentTheme.input}`} placeholder="URL de imagen" value={proj.image} onChange={e => updateListItem('projects', proj.id, 'image', e.target.value)} />
                     </div>
                   )}
-                </motion.div>
+                </Motion.div>
               ))}
             </div>
-          </motion.section>
+          </Motion.section>
 
         </div>
-      </motion.main>
+      </Motion.main>
 
-      <footer className="mt-20 py-8 border-t border-slate-800/50 text-center text-[10px] font-black uppercase tracking-[0.3em] opacity-40 hover:opacity-100 transition-opacity">
+      <footer className="print-hidden mt-20 py-8 border-t border-slate-800/50 text-center text-[10px] font-black uppercase tracking-[0.3em] opacity-40 hover:opacity-100 transition-opacity">
         BUILD V.3.0 MODERN
       </footer>
+
+      <AnimatePresence>
+        {emailCopied && (
+          <Motion.div
+            role="status"
+            aria-live="polite"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            className="print-hidden fixed bottom-6 left-1/2 z-[200] flex -translate-x-1/2 items-center gap-2 rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm font-medium text-slate-100 shadow-xl"
+          >
+            <Check size={16} className="text-emerald-400" aria-hidden="true" />
+            Correo copiado al portapapeles
+          </Motion.div>
+        )}
+      </AnimatePresence>
 
       <style dangerouslySetInnerHTML={{
         __html: `

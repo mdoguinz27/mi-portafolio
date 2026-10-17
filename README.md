@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-  🐞 QA Console Portfolio
+  🐞 QA Portfolio
 </h1>
 
 <p align="center">
