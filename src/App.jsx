@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Bug, Trash2, Plus, Mail, MapPin, GraduationCap,
+  Trash2, Plus, Mail, MapPin, GraduationCap,
   Terminal, Linkedin, Github, Lock, Unlock,
   Sun, Moon, Award,
   Monitor, Phone, Link as LinkIcon,
@@ -417,10 +417,16 @@ export default function App() {
         className={`print-hidden fixed top-0 w-full z-[100] ${currentTheme.glass} px-6 py-4 flex justify-between items-center print:hidden`}
       >
         <div className="flex items-center gap-2">
-          <div className="bg-indigo-500/10 p-2 rounded-xl">
-            <Bug size={20} className="text-indigo-500" />
+          <div className="relative flex size-10 items-center justify-center rounded-xl border border-indigo-400/20 bg-gradient-to-br from-indigo-500/20 to-emerald-400/10 shadow-inner">
+            <span className="text-[13px] font-black tracking-tight text-white">MG</span>
+            <span className="absolute -bottom-1 -right-1 grid size-4 place-items-center rounded-full border-2 border-slate-950 bg-emerald-400 text-slate-950">
+              <Check size={9} strokeWidth={3} aria-hidden="true" />
+            </span>
           </div>
-          <span className={`font-black text-lg ${currentTheme.textBold} tracking-tight`}>QA</span>
+          <div className="leading-tight">
+            <span className={`block text-xs font-black tracking-wide ${currentTheme.textBold}`}>MARIA DOGUINZ</span>
+            <span className="block text-[9px] font-bold uppercase tracking-widest text-indigo-400">QA Automation</span>
+          </div>
         </div>
 
         <div className="flex items-center gap-4">

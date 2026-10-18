@@ -52,7 +52,7 @@ body {
 
   body {
     color: #111827 !important;
-    font-size: 8pt !important;
+    font-size: 10pt !important;
   }
 
   .print-hidden,
@@ -121,7 +121,7 @@ body {
 
   .cv-print-profile h1 {
     color: #111827 !important;
-    font-size: 15pt !important;
+    font-size: 17pt !important;
     line-height: 1.15 !important;
   }
 
@@ -152,14 +152,14 @@ body {
   }
 
   .cv-print-profile a[href^="mailto:"] .truncate {
-    font-size: 7pt !important;
+    font-size: 9pt !important;
   }
 
   .cv-print-skills h3,
   .cv-print-experience h2,
   .cv-print-education h2 {
     color: #111827 !important;
-    font-size: 10pt !important;
+    font-size: 12pt !important;
   }
 
   .cv-print-skills .mb-8,
@@ -188,7 +188,7 @@ body {
 
   .cv-print-job h4 {
     color: #111827 !important;
-    font-size: 10pt !important;
+    font-size: 12pt !important;
   }
 
   .cv-print-job .mt-4 {
@@ -196,8 +196,8 @@ body {
   }
 
   .cv-print-job .text-sm {
-    font-size: 7.5pt !important;
-    line-height: 1.3 !important;
+    font-size: 9.5pt !important;
+    line-height: 1.35 !important;
   }
 
   .cv-print-job .mb-2 {
@@ -214,6 +214,7 @@ body {
   .cv-print-education-entry h4,
   .cv-print-education-entry p {
     color: #1f2937 !important;
+    font-size: 9.5pt !important;
   }
 
   .cv-print-layout a {
